@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by Nina on 19/07/2017.
  */
-@FeignClient("first-service")
+@FeignClient(value = "first-service", fallback = FirstTestClientHystrix.class)
 public interface FirstTestClient {
     @RequestMapping(value = "/test/add", method = RequestMethod.GET)
     Integer add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
