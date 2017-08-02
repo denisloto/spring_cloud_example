@@ -30,7 +30,7 @@ public class FirstTestController {
         return secondTestClient.substract(a,b);
     }
 
-    public Integer substractErrProcess(@RequestParam Integer a, @RequestParam Integer b) {
+    private Integer substractErrProcess(@RequestParam Integer a, @RequestParam Integer b) {
         return -99;
     }
 }
